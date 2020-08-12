@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;423&display=swap" rel="stylesheet">
+    <script src="public/javascript/lorem-ipsum.js"></script>
+    <title>Lorem</title>
+</head>
+<body>
+    <div class="header">
+        <h1 style="font-size: 48px;">Lorem Ipsum</h1>
+    </div>
+    <div class="workarea">
+        <div class="output">
+            <p id="out" class="out">
+                Lorem Ipsum
+            </p>
+        </div>
+        <div class="btns">
+            <select id="randSelect" name="randy">
+                <option value="words">Words</option>
+                <option value="sentence">Sentence</option>
+                <option value="paragraph">Paragraph</option>
+                <option value="random">Random</option>
+            </select>
+            <input id="count" type="number" value="0" min="0" max="100">
+            <button class="btn" id="generateBtn">Generate</button>
+            <button class="btn" id="copyBtn">Copy</button>
+        </div>
+    </div>
+<script src="public/javascript/script.js"></script>
+</body>
+</html>

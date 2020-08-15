@@ -40,7 +40,7 @@ document.getElementById("copyBtn")
         let text = document.getElementById("out").innerHTML;
         navigator.clipboard.writeText(text)
             .then(() => {
-                alert(`Copied: ${text}`);
+                console.log(`Copied: ${text}`);
             })
             .catch(err => {
                 alert('Error in copying text: ', err);

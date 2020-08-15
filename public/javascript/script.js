@@ -43,6 +43,6 @@ document.getElementById("copyBtn")
                 console.log(`Copied: ${text}`);
             })
             .catch(err => {
-                alert('Error in copying text: ', err);
+                console.log('Error in copying text: ', err);
             });
     }

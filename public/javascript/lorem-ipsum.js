@@ -1,7 +1,5 @@
 ;(function() {
-
 	"use strict";
-
 	/**
 	 * LoremIpsum constructor
 	 *
@@ -10,14 +8,12 @@
 	window.LoremIpsum = function() {
 		// pass
 	}
-
 	/**
 	 * LoremIpsum prototype
 	 *
 	 * @type {Object}
 	 */
 	window.LoremIpsum.prototype = {
-
 		/**
 		 * Possible words
 		 *
@@ -36,7 +32,6 @@
 			var rnd = (Math.random() * 2 - 1) + (Math.random() * 2 - 1) + (Math.random() * 2 - 1);
 			return Math.round(Math.abs(rnd) * x + y);
 		},
-
 		/**
 		 * Get random number between min and max
 		 *
@@ -50,10 +45,8 @@
 			else if (min) result = min;
 			else if (max) result = max;
 			else result = this._random(8, 2);
-
 			return result;
 		},
-
 		/**
 		 * Get random words
 		 *
@@ -64,7 +57,6 @@
 		words: function(min, max) {
 			var result = [];
 			var count = this._count(min, max);
-
 			// get random words
 			while (result.length < count) {
 				var pos = Math.floor(Math.random() * this._words.length);
@@ -74,13 +66,10 @@
 				if (result.length && result[result.length - 1] === rnd) {
 					continue;
 				}
-
 				result.push(rnd);
 			}
-
 			return result;
 		},
-
 		/**
 		 * Generate sentence
 		 *
@@ -90,24 +79,19 @@
 		 */
 		sentence: function(min, max) {
 			var words = this.words(min, max);
-
 			// add comma(s) to sentence
 			var index = this._random(6, 2);
 			while (index < words.length - 2) {
 				words[index] += ",";
 				index += this._random(6, 2);
 			}
-
 			// append puctation on end
 			var punct = "...!?"
 			words[words.length - 1] += punct.charAt(Math.floor(Math.random() * punct.length));
-
 			// uppercase first letter
 			words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
-
 			return words.join(" ");
 		},
-
 		/**
 		 * Generate paragraph
 		 *
@@ -120,16 +104,13 @@
 				min = 20;
 				max = 60;
 			}
-
 			var result = "";
 			var count = this._count(min, max);
-
 			// append sentences until limit is reached
 			while (result.slice(0, -1).split(" ").length < count) {
 				result += this.sentence() + " ";
 			}
 			result = result.slice(0, -1)
-
 			// remove words
 			if (result.split(" ").length > count) {
 				var punct = result.slice(-1);
@@ -140,7 +121,5 @@
 
 			return result;
 		}
-
 	}
-
 })();

@@ -4,14 +4,6 @@ var randSelect = document.getElementById("randSelect")
 var count = document.getElementById("count")
 var generateBtn = document.getElementById("generateBtn")
 var copyBtn = document.getElementById("copyBtn")
-// "sentence"
-// "paragraph"
-// "random"
-// function capitalizeFirstLetter(string) {
-//     return string.charAt(0).toUpperCase() + string.slice(1);
-// }
-
-
 
 generateBtn.addEventListener("click", () => {
     var random = ""
@@ -42,7 +34,6 @@ generateBtn.addEventListener("click", () => {
         out.innerHTML = random
     }
 });
-
 
 document.getElementById("copyBtn")
     .onclick = function () {
